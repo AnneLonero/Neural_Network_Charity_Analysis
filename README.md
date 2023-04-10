@@ -18,7 +18,17 @@ The following methods were also used in the analysis:
 ### Compliling, Training and Evaluating the Model
 * In the initial deep-learning neural network, we selected two hidden layers with 8 and 5 neurons for each layer, and `ReLU` for activation function to speed up the training process. However, we used `Sigmoid` as activation for output layer since output is a binary classification.
 
-!image.png
+Initial deep-learning model.png
 
+* The model shows the accuracy is 0.726, which is almost 72%. This is pretty low number and we would considered this model has NOT been able to achieve the target performance.
+
+Initial model testing result.png
+
+* To attempt to increase model performance, we increased values in the `APPLICATION_TYPE` buckets by categorized any `APPLICATION_TYPE` that has less then 1000 applications to "Other" category rather than 500 in the initial model. This change decrease our number of columns from 44 to 41. As a result, our accuracy slightly improved to 0.7278.
+
+increase values in bucket.png
+
+We also added more neurons to each hidden layers, 16 and 10 and later on added another hidden layer with 5 neurons. However, the result was not significantly improved.
 
 ## Summary
+Our deep-learning neural network did not reach our target of 75% accuracy. We can potentially apply other methods to optimize the performance of our model. We can also use supervised machine learning model to generate classified output to compare the performance against our neural network model.
